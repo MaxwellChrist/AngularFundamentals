@@ -11,7 +11,12 @@ import { Component } from '@angular/core';
       </div>
     </section>
   `,
-  styles: []
+  styles: [`
+    .hero 
+      background-image: url('/assets/images/Lion.png')
+      background-position: center center
+      background-size: cover
+  `]
 })
 export class HomeComponent {
 
