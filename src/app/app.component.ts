@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <app-header></app-header>
-    <app-contact></app-contact>
-    <app-home></app-home>
     <router-outlet></router-outlet>
     <app-footer></app-footer>
   `,

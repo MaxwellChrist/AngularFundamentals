@@ -5,7 +5,15 @@ import { Component, OnInit } from '@angular/core';
   template: `
   <div class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item"></a>
+      <div class="navbar-item" id="logo"></div>
+    </div>
+
+
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item" routerLink="/" >Home</div>
+        <div class="navbar-item" routerLink="/contact" >Contact</div>
+      </div>
     </div>
   </div>
   `,
@@ -14,12 +22,16 @@ import { Component, OnInit } from '@angular/core';
       background-color: #EAE9E0
       height: 100px
 
-    .navbar-item 
+    #logo
       padding: 0
       margin: 0 0 0 1rem
       background: url('../../assets/images/GoldStandard.png') no-repeat center center
       background-size: cover
       width: 100px
+
+    .navbar-item:not(#logo)
+      cursor: pointer
+    
     
 `]
 })
