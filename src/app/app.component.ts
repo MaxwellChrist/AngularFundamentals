@@ -10,5 +10,6 @@ import { Component } from '@angular/core';
   styles: []
 })
 export class AppComponent {
-  title = 'my-app';
+  constructor() {
+  }
 }
