@@ -11,8 +11,9 @@ import { Component, OnInit } from '@angular/core';
 
     <div class="navbar-menu">
       <div class="navbar-end">
-        <div class="navbar-item" routerLink="/" >Home</div>
-        <div class="navbar-item" routerLink="/contact" >Contact</div>
+        <div class="navbar-item" routerLink="/">Home</div>
+        <div class="navbar-item" routerLink="/contact">Contact</div>
+        <div class="navbar-item" routerLink="/users">Users</div>
       </div>
     </div>
   </div>
@@ -31,8 +32,6 @@ import { Component, OnInit } from '@angular/core';
 
     .navbar-item:not(#logo)
       cursor: pointer
-    
-    
 `]
 })
 export class HeaderComponent implements OnInit {
