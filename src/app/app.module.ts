@@ -9,7 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
-import { GithubUsersService } from './github-users.service';
+import { GithubUsersService } from './users/github-users.service';
 
 @NgModule({
   declarations: [
