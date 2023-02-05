@@ -9,8 +9,8 @@ import { GithubUsersService } from '../github-users.service';
       <div class="columns is-multiline" *ngIf="users">
         <div class="column is-one-quarter" *ngFor="let user of users | async">
           <div class="card">
-            <div class="card-content">
-              <h1 class="title is-4">{{ user.login }}</h1>
+            <div class="card-content" >
+              <a class="title is-3" routerLink="/users/{{user.login}}">{{ user.login }}</a>
               <img class="image" src="{{user.avatar_url}}" />
             </div>
           </div>
@@ -24,8 +24,9 @@ import { GithubUsersService } from '../github-users.service';
     .image 
       width: 100%
       border-radius: 10px
+      padding-top: 1.25rem
 
-    .is-4
+    .card-content
       text-align: center
 
     .card 
@@ -35,16 +36,17 @@ import { GithubUsersService } from '../github-users.service';
     .title
       color: #eacc85
       text-shadow: 1.5px 1.5px #835721
+      margin-bottom: 0.5rem
   `]
 })
 export class UserListComponent implements OnInit{
-  constructor(private userService: GithubUsersService)  {
+  constructor(private GithubUsersService: GithubUsersService)  {
 
   }
 
   users: any
 
   ngOnInit() {
-    this.users = this.userService.getAllUsers();
+    this.users = this.GithubUsersService.getAllUsers();
   }
 }
